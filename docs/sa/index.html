@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Situación de Aprendizaje | Hablamos con las Manos</title>
+  <meta
+    name="description"
+    content="Situación de aprendizaje inclusiva para 2-3 años sobre Lengua de Signos Española. Web interactiva, responsiva y lista para copiar."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <header class="hero" id="inicio">
+    <nav class="topbar container">
+      <a class="brand" href="#inicio">
+        <span class="brand-badge">LSE</span>
+        <span>Situación de Aprendizaje</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#vision">Visión general</a>
+        <a href="#curriculo">Currículo</a>
+        <a href="#metodologia">Metodología</a>
+        <a href="#sesiones">Sesiones</a>
+        <a href="#espacios">Espacios</a>
+        <a href="#evaluacion">Evaluación</a>
+        <a href="#anexos">Anexos</a>
+      </div>
+    </nav>
+
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Primer Ciclo de Educación Infantil · 2-3 años</p>
+        <h1>Hablamos con las Manos, Aprendemos con el Corazón</h1>
+        <p class="hero-text">
+          Web completa y editable de una situación de aprendizaje inclusiva centrada en la
+          Lengua de Signos Española, la comunicación multimodal, la empatía y la participación
+          activa de todo el grupo.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#sesiones" class="btn btn-primary">Ver sesiones</a>
+          <a href="#anexos" class="btn btn-secondary">Ir a anexos</a>
+        </div>
+
+        <div class="hero-tags">
+          <span>15 sesiones</span>
+          <span>3 semanas</span>
+          <span>DUA</span>
+          <span>Rutinas signadas</span>
+          <span>Familias</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <svg viewBox="0 0 640 520" class="hero-svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="gradMain" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7c3aed"/>
+              <stop offset="50%" stop-color="#06b6d4"/>
+              <stop offset="100%" stop-color="#22c55e"/>
+            </linearGradient>
+            <linearGradient id="gradSoft" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#f472b6"/>
+              <stop offset="100%" stop-color="#facc15"/>
+            </linearGradient>
+          </defs>
+
+          <rect x="40" y="70" width="560" height="360" rx="36" fill="rgba(255,255,255,0.82)" />
+          <circle cx="115" cy="110" r="20" fill="#f472b6"/>
+          <circle cx="160" cy="110" r="20" fill="#22c55e"/>
+          <circle cx="205" cy="110" r="20" fill="#06b6d4"/>
+
+          <rect x="80" y="150" width="220" height="220" rx="28" fill="url(#gradMain)" opacity="0.95"/>
+          <rect x="330" y="150" width="230" height="90" rx="24" fill="#eef2ff"/>
+          <rect x="330" y="260" width="230" height="110" rx="24" fill="#ecfeff"/>
+
+          <path d="M142 290c24-70 38-114 60-114 19 0 24 27 22 65l31-45c9-13 28-16 40-6 12 9 14 26 4 39l-57 79c-13 18-33 30-55 33-22 3-46-2-64-16-18-13-29-33-31-55-1-21 6-42 20-58l30 28Z" fill="#ffffff"/>
+          <circle cx="470" cy="195" r="26" fill="#8b5cf6"/>
+          <path d="M455 195h30M470 180v30" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+          <path d="M360 290h170M360 320h120" stroke="#0f172a" stroke-width="12" stroke-linecap="round" opacity="0.16"/>
+
+          <circle cx="517" cy="325" r="45" fill="url(#gradSoft)" opacity="0.95"/>
+          <path d="M503 324c8 7 14 11 29-10" stroke="#fff" stroke-width="10" stroke-linecap="round" fill="none"/>
+          <path d="M495 309h.01M535 309h.01" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-layout">
+    <aside class="sidebar">
+      <div class="panel sticky">
+        <h2>Herramientas</h2>
+        <div class="control-group">
+          <label for="searchInput">Buscar contenido</label>
+          <input id="searchInput" type="search" placeholder="sesión, recurso, evaluación..." />
+        </div>
+
+        <div class="control-group">
+          <label for="phaseFilter">Filtrar por fase</label>
+          <select id="phaseFilter">
+            <option value="all">Todas</option>
+            <option value="motivacion">Motivación</option>
+            <option value="desarrollo">Desarrollo</option>
+            <option value="consolidacion">Consolidación</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="weekFilter">Filtrar por semana</label>
+          <select id="weekFilter">
+            <option value="all">Todas</option>
+            <option value="1">Semana 1</option>
+            <option value="2">Semana 2</option>
+            <option value="3">Semana 3</option>
+          </select>
+        </div>
+
+        <div class="button-stack">
+          <button id="expandAll" class="btn btn-small">Expandir todo</button>
+          <button id="collapseAll" class="btn btn-small btn-ghost">Plegar todo</button>
+          <button id="themeToggle" class="btn btn-small btn-ghost">Cambiar tema</button>
+          <button id="printBtn" class="btn btn-small btn-ghost">Imprimir / PDF</button>
+        </div>
+
+        <div class="progress-card">
+          <div class="progress-head">
+            <span>Progreso de revisión</span>
+            <strong id="progressText">0%</strong>
+          </div>
+          <div class="progress-bar">
+            <span id="progressFill"></span>
+          </div>
+          <p>Marca las sesiones revisadas para guardar el avance en tu navegador.</p>
+        </div>
+      </div>
+    </aside>
+
+    <div class="content">
+      <section class="section" id="vision">
+        <div class="section-title">
+          <span class="section-kicker">01</span>
+          <h2>Visión general</h2>
+        </div>
+
+        <div class="intro-card">
+          <div>
+            <p class="pill">Etapa</p>
+            <h3>Primer Ciclo de Educación Infantil</h3>
+            <p>Grupo de 2 a 3 años · 16 niños y niñas · 3 semanas · 15 sesiones de 45 minutos.</p>
+          </div>
+          <div>
+            <p class="pill">Idea fuerza</p>
+            <h3>Inclusión real mediante comunicación multimodal</h3>
+            <p>
+              El aula incorpora LSE, apoyo visual, juego, canciones, cuentos, rutinas signadas y
+              participación familiar para que toda la clase aprenda a comunicarse de forma más abierta.
+            </p>
+          </div>
+        </div>
+
+        <div class="cards-grid" id="overviewCards"></div>
+      </section>
+
+      <section class="section" id="curriculo">
+        <div class="section-title">
+          <span class="section-kicker">02</span>
+          <h2>Currículo y marco técnico</h2>
+        </div>
+
+        <div class="cards-grid" id="normativaCards"></div>
+        <div class="cards-grid" id="objetivosCards"></div>
+        <div class="cards-grid" id="saberesCards"></div>
+      </section>
+
+      <section class="section" id="metodologia">
+        <div class="section-title">
+          <span class="section-kicker">03</span>
+          <h2>Metodología</h2>
+        </div>
+
+        <div class="cards-grid" id="metodologiaCards"></div>
+        <div class="cards-grid" id="temporalizacionCards"></div>
+      </section>
+
+      <section class="section" id="sesiones">
+        <div class="section-title">
+          <span class="section-kicker">04</span>
+          <h2>Actividades y sesiones</h2>
+        </div>
+
+        <div class="legend-row">
+          <span class="legend phase-motivacion">Motivación</span>
+          <span class="legend phase-desarrollo">Desarrollo</span>
+          <span class="legend phase-consolidacion">Consolidación</span>
+        </div>
+
+        <div id="sessionsContainer" class="accordion-list"></div>
+      </section>
+
+      <section class="section" id="espacios">
+        <div class="section-title">
+          <span class="section-kicker">05</span>
+          <h2>Espacios y recursos</h2>
+        </div>
+
+        <div class="cards-grid" id="espaciosCards"></div>
+        <div class="resource-columns">
+          <div class="panel">
+            <h3>Recursos humanos</h3>
+            <ul id="humanResources" class="fancy-list"></ul>
+          </div>
+          <div class="panel">
+            <h3>Recursos materiales</h3>
+            <ul id="materialResources" class="fancy-list"></ul>
+          </div>
+          <div class="panel">
+            <h3>Recursos digitales</h3>
+            <ul id="digitalResources" class="fancy-list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="evaluacion">
+        <div class="section-title">
+          <span class="section-kicker">06</span>
+          <h2>Evaluación y DUA</h2>
+        </div>
+
+        <div class="cards-grid" id="evaluationCards"></div>
+        <div class="cards-grid" id="duaCards"></div>
+      </section>
+
+      <section class="section" id="anexos">
+        <div class="section-title">
+          <span class="section-kicker">07</span>
+          <h2>Anexos</h2>
+        </div>
+
+        <div class="panel">
+          <div class="toolbar-inline">
+            <h3>Documentación asociada</h3>
+            <button id="copyAnnexes" class="btn btn-small">Copiar lista</button>
+          </div>
+          <ol id="annexList" class="annex-list"></ol>
+        </div>
+
+        <div class="panel note-panel">
+          <h3>Nota de verificación</h3>
+          <p>
+            Esta web está diseñada como plantilla completa y editable.Por Ana maria da Cunha
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Situación de Aprendizaje Interactiva</strong>
+        <p>Diseño listo para copiar, editar e imprimir.</p>
+      </div>
+      <div>
+        <p>Formato: HTML + CSS + JS sin dependencias externas de funcionalidad.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
